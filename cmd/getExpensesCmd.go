@@ -6,6 +6,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var category string
+
 var listExpensesCmd = &cobra.Command{
 	Use:   "list",
 	Short: "Get all saved expenses",
@@ -14,13 +16,20 @@ var listExpensesCmd = &cobra.Command{
 		"view", "get-all",
 	},
 	RunE: func(cmd *cobra.Command, args []string) error {
-		if err := internal.ListExpenses(); err != nil {
-			return err
+		if cmd.Flags().Changed("category") {
+			if err := internal.ListExpensesByCategory(category); err != nil {
+				return err
+			}
+		} else {
+			if err := internal.ListExpenses(); err != nil {
+				return err
+			}
 		}
 		return nil
 	},
 }
 
 func init() {
+	listExpensesCmd.Flags().StringVarP(&category, "category", "", " ", "")
 	rootCmd.AddCommand(listExpensesCmd)
 }

@@ -1,38 +1,51 @@
 [
 	{
-		"id": "23433143-72fc-4614-9f8f-5af2ca79ef97",
-		"description": "Break",
-		"amount": 100,
-		"created_at": "2026-05-29T00:43:02.754915106+01:00"
-	},
-	{
-		"id": "19a00446-ffda-47d3-b75d-0037279f208b",
-		"description": "Lunch",
-		"amount": 150,
-		"created_at": "2026-05-29T00:43:25.585960663+01:00"
-	},
-	{
-		"id": "16560d3f-3923-45af-ac95-f917455cf0e2",
-		"description": "Dinner",
-		"amount": 200,
-		"created_at": "2026-05-29T00:43:33.685237138+01:00"
-	},
-	{
-		"id": "8169df2a-9a98-491a-9abb-18a058a9d52c",
-		"description": "Rock",
+		"id": "2019fcbb-521e-48c7-a721-45ed5720dc53",
+		"description": "Marcaroni Pasta",
 		"amount": 250,
-		"created_at": "2026-05-29T00:43:52.545933311+01:00"
+		"category": "Food",
+		"created_at": "2026-05-29T01:20:02.882903648+01:00"
 	},
 	{
-		"id": "6afd41a7-1af6-4a1b-9789-f04037624eb2",
-		"description": "Fish",
-		"amount": 300,
-		"created_at": "2026-05-29T00:44:01.127431069+01:00"
+		"id": "3cab837b-5d53-4d82-8929-1bd8023c3ab2",
+		"description": "Jeans trouser",
+		"amount": 250,
+		"category": "Clothing",
+		"created_at": "2026-05-29T01:20:23.254625151+01:00"
 	},
 	{
-		"id": "264dc32a-a063-43d3-bdf2-544b482e182e",
-		"description": "Charger",
-		"amount": 150,
-		"created_at": "2026-05-29T00:44:14.926808049+01:00"
+		"id": "15060ecf-5aa1-4f7e-bdb7-589c6cba3281",
+		"description": "Radio",
+		"amount": 350,
+		"category": "Electronics",
+		"created_at": "2026-05-29T01:21:12.055804276+01:00"
+	},
+	{
+		"id": "7fe65c61-cc3e-46ed-9213-ad613fc921ad",
+		"description": "Bluetooth speaker",
+		"amount": 350,
+		"category": "Electronics",
+		"created_at": "2026-05-29T01:21:27.043373936+01:00"
+	},
+	{
+		"id": "6c1faa76-b5d6-4757-ac74-68548a073a8b",
+		"description": "Gucci top",
+		"amount": 2000,
+		"category": "Clothing",
+		"created_at": "2026-05-29T01:21:57.703081897+01:00"
+	},
+	{
+		"id": "2105b999-df1d-4c33-87bd-107f14fc50c4",
+		"description": "Fanta",
+		"amount": 2000,
+		"category": "Drinks",
+		"created_at": "2026-05-29T01:22:33.044504985+01:00"
+	},
+	{
+		"id": "db4a4c31-dfab-40a2-b89f-b1f79d81c0f8",
+		"description": "Coca-cola",
+		"amount": 20,
+		"category": "Drinks",
+		"created_at": "2026-05-29T01:24:23.704572149+01:00"
 	}
 ]

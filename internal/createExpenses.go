@@ -10,11 +10,12 @@ import (
 	"github.com/google/uuid"
 )
 
-func CreateExpense(description string, amount float64) error {
+func CreateExpense(description, category string, amount float64) error {
 	newExpense := &Expense{
 		ID:          uuid.New(),
 		Description: description,
 		Amount:      amount,
+		Category:    category,
 		CreatedAt:   time.Now(),
 	}
 	content, err := os.ReadFile(filename)

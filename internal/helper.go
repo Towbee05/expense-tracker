@@ -19,6 +19,7 @@ type Expense struct {
 	ID          uuid.UUID `json:"id"`
 	Description string    `json:"description"`
 	Amount      float64   `json:"amount"`
+	Category    string    `json:"category"`
 	CreatedAt   time.Time `json:"created_at"`
 }
 
@@ -46,9 +47,9 @@ func UnmarshalExpenses(file []byte, expenses []Expense) (*[]Expense, error) {
 
 func BeautifyPrint(expenses []Expense) {
 	tabWriter := tabwriter.NewWriter(os.Stdout, 5, 5, 5, ' ', tabwriter.Debug)
-	fmt.Fprintln(tabWriter, "ID \t DESCRIPTION \t AMOUNT")
+	fmt.Fprintln(tabWriter, "ID \t DESCRIPTION \t CATEGORY \t AMOUNT")
 	for _, e := range expenses {
-		fmt.Fprintf(tabWriter, "%v\t%s\t%f\n", e.ID, e.Description, e.Amount)
+		fmt.Fprintf(tabWriter, "%v\t%s\t%s\t%f\n", e.ID, e.Description, e.Category, e.Amount)
 	}
 	tabWriter.Flush()
 }

@@ -25,7 +25,7 @@ var createExpenseCmd = &cobra.Command{
 		if amount < 0 {
 			return fmt.Errorf("createExpenseCmd: please provide a valid amount: amount must be greater than zero")
 		}
-		if err := internal.CreateExpense(description, amount); err != nil {
+		if err := internal.CreateExpense(description, category, amount); err != nil {
 			return err
 		}
 		return nil
@@ -33,6 +33,7 @@ var createExpenseCmd = &cobra.Command{
 }
 
 func init() {
+	createExpenseCmd.Flags().StringVarP(&category, "category", "", " ", "")
 	createExpenseCmd.Flags().StringVarP(&description, "description", "D", "", "")
 	createExpenseCmd.Flags().Float64VarP(&amount, "amount", "A", 0, "")
 	createExpenseCmd.MarkFlagsRequiredTogether("description", "amount")
